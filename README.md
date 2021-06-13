@@ -2,10 +2,6 @@
 
 This folder contains the source code for the "Using Hilt in your Android app" codelab.
 
-The codelab is built in multiple GitHub branches:
-* `master` is the codelab's starting point.
-* `solution` contains the solution to this codelab.
-
 
 # Introduction
 Dependency injection is a technique widely used in programming and well suited
@@ -16,21 +12,6 @@ Implementing dependency injection provides you with the following advantages:
 * Reusability of code.
 * Ease of refactoring.
 * Ease of testing.
-
-
-# Pre-requisites
-* Experience with Kotlin syntax.
-* You understand Dependency Injection.
-
-# Getting Started
-1. Install Android Studio, if you don't already have it.
-2. Download the sample.
-3. Import the sample into Android Studio.
-4. Build and run the sample.
-
-
-# Comparison between different branches
-* [Full codelab comparison](https://github.com/googlecodelabs/android-hilt/compare/master...solution)
 
 
 # License
