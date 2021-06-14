@@ -34,7 +34,7 @@ class LoggerLocalDataSource @Inject constructor(private val logDao: LogDao) {
         Handler(Looper.getMainLooper())
     }
 
-    fun addLog(msg: String) {
+    override fun addLog(msg: String) {
         executorService.execute {
             logDao.insertAll(
                 Log(
@@ -45,14 +45,14 @@ class LoggerLocalDataSource @Inject constructor(private val logDao: LogDao) {
         }
     }
 
-    fun getAllLogs(callback: (List<Log>) -> Unit) {
+    override fun getAllLogs(callback: (List<Log>) -> Unit) {
         executorService.execute {
             val logs = logDao.getAll()
             mainThreadHandler.post { callback(logs) }
         }
     }
 
-    fun removeLogs() {
+    override fun removeLogs() {
         executorService.execute {
             logDao.nukeTable()
         }
